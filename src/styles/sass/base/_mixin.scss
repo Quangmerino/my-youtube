@@ -1,0 +1,16 @@
+@mixin flex($align: center, $justify:center) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin keyFrame {
+    @keyframes circle {
+        from {
+            opacity: 100%;
+        }
+        to {
+            opacity: 0%;
+        }
+    }
+}

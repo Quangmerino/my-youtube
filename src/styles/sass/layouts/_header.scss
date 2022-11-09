@@ -1,0 +1,101 @@
+.header {
+    @include flex(center, space-between);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    padding: 0 20px;
+    @apply grid grid-cols-12;
+    &-left {
+        @include flex(center, flex-start);
+        @apply col-span-3;
+    }
+    &-icon {
+        @include flex;
+        padding: 10px;
+        &:hover {
+            background-color: rgb(37, 36, 36);
+            border-radius: 50%;
+        }
+    }
+    &-link {
+        @include flex;
+    }
+    &-logo {
+        height: 80px;
+        width: auto;
+    }
+    &-center {
+        @include flex(center, space-between);
+        @apply col-span-6
+    }
+    &-search {
+        @include flex(center, space-between);
+        height: 50px;
+        border: 1px solid gray;
+        border-radius: 50px;
+        position: relative;
+        width: 100%;
+        margin-right: 250px;
+        &__input {
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            border-radius: 40px;
+            height: 100%;
+            width: 100%;
+            color: gray;
+            background-color: #000;
+            outline: none;
+            border: none;
+            font-size: 18px;
+        }
+        &__btn {
+            @include flex;
+            color: white;
+            height: 100%;
+            width: 10%;
+            min-width: 80px;
+            background: gray;
+            border-radius: 0 50px 50px  0;
+            border-left: 2px solid rgb(97, 96, 96);
+            position: absolute;
+            right: 0;
+        }
+    }
+    &-micro {
+        margin-left: -200px;
+        padding: 10px;
+        background-color: gray;
+        border-radius: 50%;
+        color: white;
+        &:hover {
+            opacity: 60%;
+            color: black;
+        }
+    }
+    &-right {
+        @include flex(center, flex-end);
+        @apply col-span-3;
+        padding: 0 20px;
+        &__btn {
+            margin-right: 40px;
+            &:hover {
+                background-color: rgb(37, 36, 36);
+                border-radius: 50%;
+            }
+            padding: 10px;
+        }
+        &__user {
+            overflow: hidden;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            &img {
+                object-fit: cover;
+            }
+        }
+    }
+}
