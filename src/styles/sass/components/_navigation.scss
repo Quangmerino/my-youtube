@@ -1,0 +1,40 @@
+.navigation {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: gray;
+    opacity: 0.2;
+    z-index: 10;
+    &-container {
+        padding:20px;
+        position: fixed;
+            padding: 0 20px;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 300px;
+            background-color: black;
+        &__header {
+            @include flex(center, flex-start);
+        }
+        // &__list {
+            
+        // }
+        &__item {
+            .MuiSvgIcon-root {
+                margin-right: 12px;
+            }
+            display: flex;
+            padding: 10px 15px;
+            border-radius: 10px;
+            color: white;
+            &:hover {
+                background-color: rgb(57, 56, 56);
+            }
+        }
+    }
+}
