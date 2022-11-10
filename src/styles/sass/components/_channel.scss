@@ -1,0 +1,76 @@
+.channel {
+    margin-top: 20px;
+    &-videoTitle {
+        font-size: 24px;
+    }
+    &-header {
+        @include flex(center, space-between);
+        margin-top: 10px;
+        &__left {
+            @include flex(center, flex-start);
+            gap: 30px;
+        }
+        &__right {
+            @include flex(center, space-between);
+        }
+    }
+    &-info {
+        @include flex(center, flex-start);
+        gap: 15px;
+        &__avatar {
+            border-radius: 50%;
+            width: 50px;
+        }
+        &__base {
+            @apply flex flex-col;
+        }
+        &__name {
+            font-size: 20px;
+        }
+        &__follower {
+            color: gray;
+        }
+    }
+    &-register {
+        &__btn {
+            background-color: white;
+            color: black;
+            border-radius: 30px;
+        }
+    }
+    &-right {
+        @include flex(center, space-between);
+        &__preview {
+            @include flex;
+            overflow: hidden;
+            border: solid 1px gray;
+            border-radius: 30px;
+            &-buttonLike {
+                @include flex;
+                flex-direction: row-reverse;
+                gap: 4px;
+                border-right: 1px solid gray;
+            }
+            button {
+                &:hover {
+                    background-color: gray;
+                }
+            }
+        }
+        &__share-btn {
+            margin-left: 10px;
+            @extend .channel-right__preview;
+            gap: 4px;
+            &:hover {
+                background-color: gray;
+            }
+        }
+        &__cut-btn {
+            @extend .channel-right__share-btn;
+        }
+        &__more-btn {
+            @extend .channel-right__share-btn;
+            width: 45px;
+        }
+    }
+}

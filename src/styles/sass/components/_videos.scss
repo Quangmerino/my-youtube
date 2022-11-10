@@ -1,0 +1,32 @@
+.video {
+    @apply flex flex-col gap-4;
+    &-item {
+        a {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 12px;
+            padding-right: 8px;
+        }
+    }
+    &-thumnail {
+        border-radius: 10px
+    }
+    &-info {
+        @apply flex flex-col gap-1.5;
+        &__title {
+            @apply line-clamp-2;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        &__nameChanel {
+            @include flex(center, flex-start);
+            gap: 4px;
+            color: gray;
+        }
+        &__analytic {
+            color: gray;
+            @include flex(center, flex-start);
+            gap: 8px;
+        }
+    }
+}
